@@ -36,9 +36,14 @@
                                 </ol>
                             </p>
                             <span>Your firmware will be flashed at 0x00</span>
-                            <div class="my-4">
-                                <button class="btn btn-primary" id="select">Select firmware</button>
-                                <esp-web-install-button manifest="/manifest.json"><button slot="activate" class="btn btn-success">Flash</button></esp-web-install-button>
+                            <div class="mb-4">
+                                <button class="btn btn-primary mt-4" id="select">Select firmware</button>
+                                <esp-web-install-button manifest="/manifest.json">
+                                    <button slot="activate" class="btn btn-success mt-4">Flash</button>
+                                    <div class="alert alert-dismissible alert-danger mt-4" slot="unsupported">
+                                        Your browser does not support installing things on ESP devices. Use Google Chrome or Microsoft Edge.
+                                    </div>
+                                </esp-web-install-button>
                             </div>
 
                             This flasher is dedicated to <a href="https://github.com/richonguzman?tab=repositories&q=LoRa&type=&language=&sort=">Ricardo CA2RXU</a> LoRa firmwares <br> but should work with anything if you know what you are doing
